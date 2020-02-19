@@ -16,6 +16,8 @@ import matplotlib.pyplot as plt
 import torch.optim as optim
 import imageio
 
+COLOR_HISTOGRAM_MATCHING = True
+
 ALPHA = 1
 BETA = 10 ** 6
 
@@ -49,6 +51,9 @@ torch_layers = model._modules.items()
 # inputs
 content_image = load_image("../images/content/" + CONTENT_IMAGE_NAME).to(device)
 style_image = load_image("../images/style/" + STYLE_IMAGE_NAME, shape=content_image.shape[-2:]).to(device)
+
+if COLOR_HISTOGRAM_MATCHING:
+    style_image = load_image("../images/results/CHM_" + STYLE_IMAGE_NAME, shape=content_image.shape[-2:]).to(device)
 
 assert content_image.size() == style_image.size(), \
     "content and style images need to be of the same size"

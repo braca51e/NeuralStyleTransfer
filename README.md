@@ -9,7 +9,9 @@ Implementation of 2D Neural Style Transfer in a manner proposed in an original p
 * [PyTorch](https://pytorch.org/) : Open source machine learning library based on the Torch library, used for applications such as computer vision and natural language processing
 
 ## How to run?
-Just run `main.py` in `initialModel` package. If `COLOR_HISTOGRAM_MATCHING` variable is set to True, then it will do the Color Preservation optimization.
+Just run `main.py` in `initialModel` package.<br>
+If `COLOR_HISTOGRAM_MATCHING` variable is set to True, then it will do the color preservation optimization with technique: Color Histogram Matching.<br>
+If `LUMINANCE_ONLY_TRANSFER` variable is set to True, then it will do the color preservation optimization with technique: Luminance Only Transfer.
 
 ## Example with color preservation
 For given inputs:

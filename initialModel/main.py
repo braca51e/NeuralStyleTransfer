@@ -17,6 +17,7 @@ import torch.optim as optim
 import imageio
 
 COLOR_HISTOGRAM_MATCHING = True
+LUMINANCE_ONLY_TRANSFER = False
 
 ALPHA = 1
 BETA = 10 ** 6
@@ -54,6 +55,9 @@ style_image = load_image("../images/style/" + STYLE_IMAGE_NAME, shape=content_im
 
 if COLOR_HISTOGRAM_MATCHING:
     style_image = load_image("../images/results/CHM_" + STYLE_IMAGE_NAME, shape=content_image.shape[-2:]).to(device)
+
+if LUMINANCE_ONLY_TRANSFER:
+    style_image = load_image("../images/results/LOT_" + STYLE_IMAGE_NAME, shape=content_image.shape[-2:]).to(device)
 
 assert content_image.size() == style_image.size(), \
     "content and style images need to be of the same size"

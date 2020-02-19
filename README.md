@@ -18,3 +18,7 @@ For given inputs:
 ![alt text](https://raw.githubusercontent.com/reinai/NeuralStyleTransfer/master/images/results/resultExamples/third/contentstyle3.PNG)
 Outputs with different ratios:
 ![alt text](https://raw.githubusercontent.com/reinai/NeuralStyleTransfer/master/images/results/resultExamples/third/collage.jpg)
+
+## Poster
+![alt text](https://raw.githubusercontent.com/reinai/NeuralStyleTransfer/master/poster/nstPoster-1.png)
+
